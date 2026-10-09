@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#111827" />
+  <meta name="description" content="OmniCalc is a free, responsive scientific calculator for everyday and advanced calculations." />
+  <title>OmniCalc — Smart Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="OmniCalc home">
+        <span class="brand-icon">∑</span>
+        <span>omni<span class="accent">calc</span></span>
+      </a>
+      <div class="top-actions">
+        <button id="history-toggle" class="icon-btn" aria-label="Toggle calculation history" title="History">◷</button>
+        <button id="theme-toggle" class="icon-btn" aria-label="Toggle color theme" title="Toggle theme">☼</button>
+      </div>
+    </header>
+
+    <section class="workspace">
+      <section class="calculator panel" aria-label="Calculator">
+        <div class="calc-heading">
+          <div>
+            <p class="eyebrow">YOUR EVERYDAY TOOL</p>
+            <h1>Calculator<span class="live-dot"></span></h1>
+          </div>
+          <button id="mode-toggle" class="mode-btn" aria-pressed="false">SCI <span>＋</span></button>
+        </div>
+
+        <div class="display" aria-label="Calculator display">
+          <div class="display-meta">
+            <span id="mode-label">STANDARD MODE</span>
+            <span id="angle-label">DEG</span>
+          </div>
+          <div id="expression" class="expression" aria-label="Expression" aria-live="polite"></div>
+          <output id="result" class="result" aria-live="polite">0</output>
+          <div id="status" class="status" role="status">Ready for your next calculation</div>
+        </div>
+
+        <div class="utility-row">
+          <button data-action="clear" class="utility danger">AC</button>
+          <button data-action="delete" class="utility">DEL</button>
+          <button data-value="(" class="utility">(</button>
+          <button data-value=")" class="utility">)</button>
+          <button data-value="÷" class="operator">÷</button>
+        </div>
+
+        <div id="scientific-keys" class="scientific-keys hidden">
+          <button data-fn="sin">sin</button>
+          <button data-fn="cos">cos</button>
+          <button data-fn="tan">tan</button>
+          <button data-fn="log">log</button>
+          <button data-fn="ln">ln</button>
+          <button data-fn="sqrt">√</button>
+          <button data-value="^">xʸ</button>
+          <button data-value="!">x!</button>
+          <button data-value="π">π</button>
+          <button data-value="e">e</button>
+          <button data-action="sign">±</button>
+          <button id="angle-toggle" data-action="angle">DEG</button>
+        </div>
+
+        <div class="keypad">
+          <button data-value="7">7</button>
+          <button data-value="8">8</button>
+          <button data-value="9">9</button>
+          <button data-value="×" class="operator">×</button>
+
+          <button data-value="4">4</button>
+          <button data-value="5">5</button>
+          <button data-value="6">6</button>
+          <button data-value="-" class="operator">−</button>
+
+          <button data-value="1">1</button>
+          <button data-value="2">2</button>
+          <button data-value="3">3</button>
+          <button data-value="+" class="operator">+</button>
+
+          <button data-value="%" class="utility">%</button>
+          <button data-value="0">0</button>
+          <button data-value=".">.</button>
+          <button data-value="+" class="operator">+</button>
+
+          <button data-value="Ans" class="utility ans-key">Ans</button>
+          <button data-action="equals" class="equals">=</button>
+        </div>
+
+        <p class="keyboard-hint">Keyboard supported · Enter to calculate · Esc to clear</p>
+      </section>
+
+      <aside id="history-panel" class="history-panel panel" aria-label="Calculation history" hidden>
+        <div class="history-heading">
+          <div>
+            <p class="eyebrow">YOUR RECENT WORK</p>
+            <h2>History</h2>
+          </div>
+          <button id="clear-history" class="text-btn">Clear all</button>
+        </div>
+        <div id="history-list" class="history-list">
+          <p class="empty-history">Your calculations will appear here.</p>
+        </div>
+      </aside>
+    </section>
+
+    <footer>
+      <span>OMNICAlC <span class="footer-separator">/</span> BUILT FOR CLARITY</span>
+      <span>Free · Private · No sign-up</span>
+    </footer>
+  </main>
+</body>
+</html>
