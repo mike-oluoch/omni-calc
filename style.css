@@ -21,8 +21,8 @@
     margin: 0;
     min-height: 100vh;
     background:
-      radial-gradient(ellipse at 15% 0%, #29245155, transparent 42%),
-      radial-gradient(ellipse at 95% 90%, #164e6330, transparent 40%),
+      radial-gradient(ellipse at 15% 0%, #ffffff55, transparent 42%),
+      radial-gradient(ellipse at 95% 90%, #c5ced130, transparent 40%),
       var(--bg);
     color: var(--text);
   }
