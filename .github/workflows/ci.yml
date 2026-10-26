@@ -1,0 +1,27 @@
+name: OmniCalc Quality & Syntax Gate
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  verify:
+    name: syntax-and-integrity-check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Source
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Validate JavaScript Syntax
+        run: node --check script.js
+
+      - name: Check HTML Structure
+        run: |
+          grep -q "OmniCalc" index.html || (echo "Missing title/brand" && exit 1)
