@@ -14,6 +14,7 @@ A responsive, browser-based calculator built with HTML, CSS, and vanilla JavaScr
 - Keyboard support
 - Responsive mobile and desktop layout
 - Expression parsing without JavaScript eval()
+- Zero-dependency client-side execution
 - No dependencies, API keys, or backend required
 
 ## Run locally
@@ -36,20 +37,6 @@ Alternatively, install the **Live Server** extension in VS Code, right-click `in
 | ^ | Exponentiation |
 | % | Percentage |
 
-## Deploy to GitHub Pages
-
-1. Create a new GitHub repository named `omni-calculator`.
-2. Upload `index.html`, `style.css`, `script.js`, and `README.md` to the repository root.
-3. Open **Settings → Pages**.
-4. Under **Build and deployment**, select **Deploy from a branch**.
-5. Choose the `main` branch and `/ (root)` folder.
-6. Click **Save**.
-
-After GitHub Pages finishes publishing, your site will be available at:
-
-`https://YOUR-USERNAME.github.io/omni-calculator/`
-
-Replace `YOUR-USERNAME` with your GitHub username.
 
 ## License
 
